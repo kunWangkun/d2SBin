@@ -3,7 +3,7 @@
 
 d2SBin is based on the mechanism that relative sequence compositions are similar across different regions of the same genome, but differ between genomes. Current tools generally used the normalized frequency of k-tuple directly, which actually is the absolute instead of relative sequence composition. Therefore, we attempted to model the relative sequence composition and to measure the dissimilarity between contigs with d2S. We applied d2SBin to adjust the outputs of five widely-used contig-binning tools on six datasets. The experiments showed that d2sBin can improve the contig binning performance significantly. 
 
-The d2SBin pipeline was developed with Python and run on the Unix and Linux platform, and the detail description of running is provided in the following. 
+The d2SBin pipeline was developed with Python and run on the Unix and Linux platform, and the detail description of running is provided [here](https://github.com/kunWangkun/d2SBin#package-installation-and-configuration). 
 
 ## Version Release Notes
 
