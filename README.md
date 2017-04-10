@@ -40,7 +40,7 @@ The whole source code was developed by Ying Wang's group, Automation Department,
 	-r, --order: The order of markov model(0,1,2,3,k-2)  
 	-o,  --output: The output path of d2SBin results  
 
-### 2. Input: The output of existing contig-binning tools.
+### 2. Input: The output of existing contig-binning tools
 The current output of contig-binning have the following two formats:
 - Format1: fasta files with contigs sequence from the same bins. For example, *MaxBin.out.001.fasta*
 
@@ -103,9 +103,8 @@ we provide a script *evaluation.py* for computing performance of binning results
   	-c, --binning_result: binning result file. e.g, d2SBin.k6.r0.txt  
  	-t, --ture_label: true label of contigs  
   	-e, --eva_output_dir: the path of evaluation file  
-   e.g:
-	*`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*   
-
+- Command:  
+     e.g:  *`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*   
 
 
 ## The demo of d2SBin on testing dataset. 
