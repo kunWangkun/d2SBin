@@ -1,5 +1,5 @@
 # Welcome to use d2SBin
-d2SBin is easy-to-use contig-binning improving tool, which adjusted the contigs among bins based on the output of any existing binning tools. The tool is taxonomy-free only on the k-tuples for single metagenomic sample.
+  d2SBin is easy-to-use contig-binning improving tool, which adjusted the contigs among bins based on the output of any existing binning tools. The tool is taxonomy-free only on the k-tuples for single metagenomic sample.
 
 d2SBin is based on the mechanism that relative sequence compositions are similar across different regions of the same genome, but differ between genomes. Current tools generally used the normalized frequency of k-tuple directly, which actually is the absolute instead of relative sequence composition. Therefore, we attempted to model the relative sequence composition and to measure the dissimilarity between contigs with d2S. We applied d2SBin to adjust the outputs of five widely-used contig-binning tools on six datasets. The experiments showed that d2sBin can improve the contig binning performance significantly. 
 
@@ -8,7 +8,7 @@ The d2SBin pipeline was developed with Python and run on the Unix and Linux plat
 ## Version Release Notes
 
 - Version 1.0  
-	1.This is the first version of d2SBin pipeline.[(Source code Download )](https://raw.githubusercontent.com/kunWangkun/d2SBin/master/d2SBin_SourceCode.rar)  
+	1.This is the first version of d2SBin pipeline. [(Source code Download )](https://raw.githubusercontent.com/kunWangkun/d2SBin/master/d2SBin_SourceCode.rar)  
 	2.An demo of d2SBin running is given [here](https://github.com/kunWangkun/d2SBin/blob/master/README.md#the-demo-of-d2sbin-on-testing-dataset).  
 ## Development Team
 The whole source code was developed by Ying Wang's group, Automation Department, Xiamen University, P.R.China. All the suggestions and questions are welcome to *wangying AT xmu.edu.cn*.
@@ -55,8 +55,9 @@ The current output of contig-binning have the following two formats:
 	`>contig-1.1`  
 	`…`  
 	
-d2SBin is compatible to the two formats as the following commands:         
-- **format1 input**
+d2SBin is compatible to the two formats as the following commands:
+
+- **Format1 input**
 
   In this case, d2SBin needs one list file as input.  
   
@@ -68,20 +69,17 @@ d2SBin is compatible to the two formats as the following commands:
   
 	 *`$ python d2SBin.py -s input_file_list_fomat1.txt -k 6 -r 0 -o ../data/output/`*  
 	
-- **format2 input**
+- **Format2 input**
 
-  As for format2, d2SBin needs two input files:   
+	As for format2, d2SBin needs two input files: the original contig sequences file, e.g: *contigs.fasta*, and list file of other tools output.   
   
-     (1)The original contig sequences file, e.g: *contigs.fasta*  
-     (2)List file of other tools output.   
+	First, get the list file:  	
   
-  First, get the list file:  	
-  
-	*`$ ls /home/.../MetaCluster.out*.fa > input_file_list_fomat2.txt`*     
+	 *`$ ls /home/.../MetaCluster.out*.fa > input_file_list_fomat2.txt`*     
 	
-  Next, run d2SBin.py:  
+ 	Next, run d2SBin.py:  
   
-	*`$ python d2SBin.py -n input_file_list_format2.txt -c contigs.fasta -k 6 -r 0 -o ../data/output`*     
+	 *`$ python d2SBin.py -n input_file_list_format2.txt -c contigs.fasta -k 6 -r 0 -o ../data/output`*     
 
 ### 3. Output 
 d2SBin also has two formats of output:  
@@ -96,7 +94,20 @@ d2SBin also has two formats of output:
 	`GACACTTTTAGTGGGCGTAAACTTCATCTAGTGGATCT`  
 	`>contig-1.1`  
 	`CCATGTCAGAAGAAGTTGGTAATCGCCACATTAATTGTTTGTCGTTTGATCGA`   
-	
+
+### 4. Evaluate output   
+we provide a script *evaluation.py* for computing performance of binning results. The usage can be viewed by typing *python evaluation.py -h* on the command line:
+- Options:  
+
+ 	-h, --help: show this help message and exit  
+  	-c, --binning_result: binning result file. e.g, d2SBin.k6.r0.txt  
+ 	-t, --ture_label: true label of contigs  
+  	-e, --eva_output_dir: the path of evaluation file  
+   e.g:
+	*`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*   
+
+
+
 ## The demo of d2SBin on testing dataset. 
 
 Dataset1: 10 genomes-20×[(Testing dataset Download)](https://raw.githubusercontent.com/kunWangkun/d2SBin/master/testing_data.rar)  
