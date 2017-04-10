@@ -6,22 +6,22 @@ d2SBin is based on the mechanism that relative sequence compositions are similar
 The d2SBin pipeline was developed with Python and run on the Unix and Linux platform, and the detail description of running is provided in the following. 
 
 ## Version Release Notes
-- Version 1.0
-1. This is the first version of d2SBin pipeline.[(Source code Download )](https://raw.githubusercontent.com/kunWangkun/d2SBin/master/d2SBin_SourceCode.rar)
-2. An demo of d2SBin running is given in the following.
+- Version 1.0  
+        1.This is the first version of d2SBin pipeline.[(Source code Download )](https://raw.githubusercontent.com/kunWangkun/d2SBin/master/d2SBin_SourceCode.rar)  
+	2.An demo of d2SBin running is given in the following.  
 ## Development Team
 The whole source code was developed by Ying Wang's group, Automation Department, Xiamen University, P.R.China. All the suggestions and questions are welcome to *wangying AT xmu.edu.cn*.
  
 ## Package installation and configuration
-- Pre-install running environment
- 1. Unix or Linux operating system.
- 2. Python 2.7 or above.
-- Detailed steps
- 1. Download the source code to your directory, e.g: ’/home/user/d2SBin’.
- 2. Enter your specified directory: bash-3.2$ cd /home/user/d2SBin
- 3. Extract the tar file:  bash-3.2$ tar -xvf d2SBin_SourceCode.tar
- 4. Enter the directory:  bash-3.2$ cd /home/user/d2SBin/d2SBin_SourceCode
- 5. If your operating system has multiple Python version , please be sure your Python version at least 2.7 or above.
+- Pre-install running environment  
+ 	1.Unix or Linux operating system.  
+ 	2.Python 2.7 or above.  
+- Detailed steps  
+        1.Download the source code to your directory, e.g: *’/home/user/d2SBin’*.  
+ 	2.Enter your specified directory: *bash-3.2$ cd /home/user/d2SBin*  
+ 	3.Extract the tar file:  *bash-3.2$ tar -xvf d2SBin_SourceCode.tar*  
+ 	4.Enter the directory:  *bash-3.2$ cd /home/user/d2SBin/d2SBin_SourceCode*  
+ 	5.If your operating system has multiple Python version, please be sure your Python version at least 2.7 or above.  
 
 ## Running of d2SBin Pipeline
 ### 1. Uesage of d2SBin
