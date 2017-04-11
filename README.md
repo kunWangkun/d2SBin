@@ -113,7 +113,7 @@ We provide a script *evaluation.py* for computing performance of binning results
 - Options:  
 
  	-h, --help: show this help message and exit  
-  	-c, --binning_result: binning result file. e.g, d2SBin.k6.r0.txt  
+  	-c, --binning_result: binning result file.    
  	-t, --ture_label: true label of contigs  
   	-e, --eva_output_dir: the path of evaluation file  
 - Command:  
