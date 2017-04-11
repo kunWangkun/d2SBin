@@ -1,7 +1,7 @@
 # Welcome to use d2SBin
   d2SBin is easy-to-use contig-binning improving tool, which adjusted the contigs among bins based on the output of any existing binning tools. The tool is taxonomy-free only on the k-tuples for single metagenomic sample.
 
-d2SBin is based on the mechanism that relative sequence compositions are similar across different regions of the same genome, but differ between genomes. Current tools generally used the normalized frequency of k-tuple directly, which actually is the absolute instead of relative sequence composition. Therefore, we attempted to model the relative sequence composition and to measure the dissimilarity between contigs with d2S. We applied d2SBin to adjust the outputs of five widely-used contig-binning tools on six datasets. The experiments showed that d2sBin can improve the contig binning performance significantly. 
+d2SBin is based on the mechanism that relative sequence compositions are similar across different regions of the same genome, but differ between genomes. Current tools generally used the normalized frequency of k-tuple directly, which actually is the absolute instead of relative sequence composition. Therefore, we attempted to model the relative sequence composition and to measure the dissimilarity between contigs with d2S. We applied d2SBin to adjust the outputs of five widely-used contig-binning tools on six datasets. The experiments showed that d2SBin can improve the contig binning performance significantly. 
 
 The d2SBin pipeline was developed with Python and run on the Unix and Linux platform, and the detail description of running is provided [here](https://github.com/kunWangkun/d2SBin#package-installation-and-configuration). 
 
@@ -28,33 +28,41 @@ The whole source code was developed by Ying Wang's group, Automation Department,
 
 ### 1. Uesage of d2SBin  
   
-   The command can be viewed by typing *python d2SBin.py -h* on the command line:
+- The main running command is d2SBin.py with following options:    
 
-- Options:
-
-	-h, --help: show this help message and exit.  
-	-s, --inputList_withSeq: List of path and file name of contig files with sequence(Format1).  
-	-c, --contig_Seq: The original contig sequences file.  
-	-n, --inputList_noSeq: List of path and name of files with contig name (Format2).  
-	-k, --kofKTuple: The value k of KTuple  
-	-r, --order: The order of markov model(0,1,2,3,k-2)  
-	-o,  --output: The output path of d2SBin results  
+	-h, --help: show the help message.  
+	-s, --inputList_withSeq: List of path and file name of contig files with sequence(for Format1).  
+	-c, --contig_Seq: The original fasta file including total contig sequences(for Format2).  
+	-n, --inputList_noSeq: List of path and name of files with contig ID (for Format2).  
+	-k, --kofKTuple: The value k of KTuple (default is k=6)  
+	-r, --order: The order of markov model(0,1,2,3,k-2) (default is r=0)  
+	-o, --output: The output path of d2SBin results  
+ 
 
 ### 2. Input: The output of existing contig-binning tools
-The current output of contig-binning have the following two formats:
-- Format1: fasta files with contigs sequence from the same bins. For example, *MaxBin.out.001.fasta*
+The input of d2SBin is the output of existing contig-binning tools. The output of current contig-binning tools has the following two formats:
+- Format1: fasta files with contigs sequence from the same bins, such as the outputs from tools MaxBin, MetaWatt and SCIMM. Their outputs include bins-number of fasta files. Each fasta file includes the contigs ID and sequence clustered in the same bin. For example, the outputs from MaxBin are MaxBin.out.001.fasta...MaxBin.out.00X.fasta, where X is the bins number by MaxBin. The *MaxBin.out.001.fasta* is as follows.
 
 	`>contig-1.0`  
 	`GACACTTTTAGTGGGCGTAAACTTCATCTAGTGGATCT`  
-	`>contig-1.1`  
+	`>contig-1.2`  
 	`CCATGTCAGAAGAAGTTGGTAATCGCCACATTAATTGTTTGTCGTTTGATCGA`  
 	`…`  
-- Format2: fasta files only with contig name from the same bins. For example, *MetaCluster.out.001.fasta*  
+- Format2: fasta files only with contig name from the same bins, such as the outputs from tools MetaCluster and so on. For Their outputs include bins-number of fasta files. Each fasta file only includes the contigs ID in the same bin, so the orginal fasta file including all the sequences of total contigs is also required. For example, the outputs from MetaCluster is MetaCluster.out.001.fasta ……MetaCluster.out.00Y.fasta, where Y is the bins number by MetaCluster. The *MetaCluster.out.001.fasta* is as follows  
 
 	`>contig-1.0`  
 	`>contig-1.1`  
 	`…`  
+	The original file include total contigs and theire sequences *contigs.fasta* is as follows:   
 	
+	`>contig-1.0`   
+	`GACACTTTTAGTGGGCGTAAACTTCATCTAGTGGATCT`   
+	`>contig-1.1`    
+	`TGGTAATCGCCACATTAAAGAAGTTGGTAA`  
+	`>contig-1.2`    
+	`CCATGTCAGAAGAAGTTGGTAATCGCCACATTAATTGTTTGTCGTTTGATCGA`    
+	`…`  
+
 d2SBin is compatible to the two formats as the following commands:
 
 - **Format1 input**
