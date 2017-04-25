@@ -8,7 +8,7 @@ The d2SBin pipeline was developed with Python and run on the Unix and Linux plat
 ## Version Release Notes
 
 - Version 1.0  
-	1.This is the first version of d2SBin pipeline. [(Source code Download )](https://raw.githubusercontent.com/kunWangkun/d2SBin/master/d2SBin_SourceCode.rar)  
+	1.This is the first version of d2SBin pipeline. [(Source code Download )](https://raw.githubusercontent.com/kunWangkun/d2SBin/master/d2SBin_SourceCode.tar)  
 	2.An demo of d2SBin running is given [here](https://github.com/kunWangkun/d2SBin/blob/master/README.md#the-demo-of-d2sbin-on-testing-dataset).  
 ## Development Team
 The whole source code was developed by Ying Wang's group, Automation Department, Xiamen University, P.R.China. All the suggestions and questions are welcome to *wangying AT xmu.edu.cn*.
