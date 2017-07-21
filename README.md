@@ -43,14 +43,14 @@ The whole source code was developed by Ying Wang's group, Automation Department,
 ### 2. Input: The output of existing contig-binning tools  
 
 The input of d2SBin is the output of existing contig-binning tools. The output of current contig-binning tools has the following two formats:
-- Format1: fasta files with contigs sequence from the same bins, such as the outputs from tools MaxBin, MetaWatt and SCIMM. Their outputs include bins-number of fasta files. Each fasta file includes the contigs ID and sequence clustered in the same bin. For example, the outputs from MaxBin are *MaxBin.out.001.fasta...MaxBin.out.00X.fasta*, where *X* is the bins number by MaxBin. The *MaxBin.out.001.fasta* is as follows.
+- d2SBin_input_format1: fasta files with contigs sequence from the same bins, such as the outputs from tools MaxBin, MetaWatt and SCIMM. Their outputs include bins-number of fasta files. Each fasta file includes the contigs ID and sequence clustered in the same bin. For example, the outputs from MaxBin are *MaxBin.out.001.fasta...MaxBin.out.00X.fasta*, where *X* is the bins number by MaxBin. The *MaxBin.out.001.fasta* is as follows.
 
 	`>contig-1.0`  
 	`GACACTTTTAGTGGGCGTAAACTTCATCTAGTGGATCT`  
 	`>contig-1.2`  
 	`CCATGTCAGAAGAAGTTGGTAATCGCCACATTAATTGTTTGTCGTTTGATCGA`  
 	`…`  
-- Format2: fasta files only with contigs name from the same bins, such as the outputs from tool MetaCluster. Its outputs include bins-number of fasta files. Each fasta file only includes the contigs ID in the same bin, so the orginal fasta file including all the sequences of total contigs is also required. For example, the outputs from MetaCluster are *MetaCluster.out.001.fa … MetaCluster.out.00Y.fa*, where *Y* is the bins number by MetaCluster. The *MetaCluster.out.001.fa* is as follows  
+- d2SBin_input_format2: fasta files only with contigs name from the same bins, such as the outputs from tool MetaCluster. Its outputs include bins-number of fasta files. Each fasta file only includes the contigs ID in the same bin, so the orginal fasta file including all the sequences of total contigs is also required. For example, the outputs from MetaCluster are *MetaCluster.out.001.fa … MetaCluster.out.00Y.fa*, where *Y* is the bins number by MetaCluster. The *MetaCluster.out.001.fa* is as follows  
 
 	`>contig-1.0`  
 	`>contig-1.1`  
