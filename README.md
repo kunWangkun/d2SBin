@@ -129,18 +129,17 @@ We provide a script *evaluation.py* for computing performance of binning with th
 	
 	(2)  Evaluate the original output of binning tools  
 
-	a. d2SBin_input_format1(.fasta files with contigs ID and sequences from same bins)  
-   	You can create a list file and use the option *-l* . e.g:  
+	For d2SBin_input_format1(.fasta files with contigs ID and sequences from same bins), you can create a list file and use the option *-l* to evaluate the result. e.g:  
 	
 	*`$ ls /home/.../Binning.output*.fasta > output_fasta_file_list.txt`*    
 		
 	*`$ python evaluation.py -l output_fasta_file_list.txt -t real_label.txt -e ./eva`*   
 	
-	b. d2SBin_input_format2(.fa files only with contigs id from the same bins)  
+	As for d2SBin_input_format2(.fa files only with contigs id from the same bins):
 
-*`$ ls /home/.../Binning.output*.fa > output_fa_file_list.txt`*     
+	*`$ ls /home/.../Binning.output*.fa > output_fa_file_list.txt`*     
 		
-*`$ python evaluation.py -l output_fa_file_list.txt -t real_label.txt -e ./eva`*   
+	*`$ python evaluation.py -l output_fa_file_list.txt -t real_label.txt -e ./eva`*   
 
 
 ## The demo of d2SBin on testing dataset. 
