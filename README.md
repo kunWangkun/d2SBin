@@ -112,24 +112,31 @@ d2SBin also has two formats of output:
 ### 4. Evaluate output   
 We provide a script *evaluation.py* for computing performance of binning with the two formats of output mentioned above. The usage can be viewed by typing *python evaluation.py -h* on the command line:  
 
-- Options:  
+- **Options:**  
 
  	-h, --help: show this help message and exit.   
   	-c, --binning_result: binning result file.    
 	-l, --list of binning result files.    
  	-t, --true_label: true label of contigs.   
   	-e, --eva_output_dir: the path of evaluation file.    
-- Usage:
-
-	For the Format1 output(*.txt* file with contigs ID and binning result label), you can use the option *-c* to evaluate the result. e.g:	
+- **Usage:**
+(1)  Evaluate the output of d2SBin	
   
      *`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*      
 	
-	As for the Format2(*.fasta* files with sequence from same bins), you can create a list file and use the option *-l* . e.g:  
+(2)  Evaluate the original output of binning tools
+a. d2SBin_input_format1(.fasta files with contigs ID and sequences from same bins)
+   You can create a list file and use the option *-l* . e.g:  
 	
-	*`$ ls /home/.../Binning.output*.fasta > output_file_list.txt`*    
+	*`$ ls /home/.../Binning.output*.fasta > output_fasta_file_list.txt`*    
 		
-	*`$ python evaluation.py -l output_file_list.txt -t real_label.txt -e ./eva`*   
+	*`$ python evaluation.py -l output_fasta_file_list.txt -t real_label.txt -e ./eva`*   
+	
+b. d2SBin_input_format2(.fa files with contigs ID and without sequences from same bins)
+
+	*`$ ls /home/.../Binning.output*.fa > output_fa_file_list.txt`*    
+		
+	*`$ python evaluation.py -l output_fa_file_list.txt -t real_label.txt -e ./eva`* 
 
 
 ## The demo of d2SBin on testing dataset. 
