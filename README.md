@@ -122,13 +122,13 @@ We provide a script *evaluation.py* for computing performance of binning with tw
 
 	If the output of binning is one file with contigs ID and binning result labels, you can use the option *-c*. e.g:  
 	
-		*`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`* 
+		*`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*   
 	
 	If the output of binning are files with sequences from same bins, you can create a list file and use the option *-l* to evaluate the result. e.g:  
 	
-		*`$ ls /home/.../Binning.output*.fasta > output_file_list.txt`*  
+		*`$ ls /home/.../Binning.output*.fasta > output_file_list.txt`*    
 		
-		*`$ python evaluation.py -l output_file_list.txt -t real_label.txt -e ./eva`* 
+		*`$ python evaluation.py -l output_file_list.txt -t real_label.txt -e ./eva`*   
 
 
 ## The demo of d2SBin on testing dataset. 
