@@ -135,7 +135,7 @@ We provide a script *evaluation.py* for computing performance of binning with th
 		
 	*`$ python evaluation.py -l output_fasta_file_list.txt -t real_label.txt -e ./eva`*   
 	
-	As for d2SBin_input_format2(.fa files only with contigs id from the same bins):
+	As for d2SBin_input_format2(.fa files only with contigs ID from the same bins):
 
 	*`$ ls /home/.../Binning.output*.fa > output_fa_file_list.txt`*     
 		
