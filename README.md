@@ -43,14 +43,14 @@ The whole source code was developed by Ying Wang's group, Automation Department,
 ### 2. Input: The output of existing contig-binning tools  
 
 The input of d2SBin is the output of existing contig-binning tools. The output of current contig-binning tools has the following two formats:
-- d2SBin_input_format1: fasta files with contigs sequence from the same bins, such as the outputs from tools MaxBin, MetaWatt and SCIMM. Their outputs include bins-number of fasta files. Each fasta file includes the contigs ID and sequence clustered in the same bin. For example, the outputs from MaxBin are *MaxBin.out.001.fasta...MaxBin.out.00X.fasta*, where *X* is the bins number by MaxBin. The *MaxBin.out.001.fasta* is as follows.
+- Format1: fasta files with contigs sequence from the same bins, such as the outputs from tools MaxBin, MetaWatt and SCIMM. Their outputs include bins-number of fasta files. Each fasta file includes the contigs ID and sequence clustered in the same bin. For example, the outputs from MaxBin are *MaxBin.out.001.fasta...MaxBin.out.00X.fasta*, where *X* is the bins number by MaxBin. The *MaxBin.out.001.fasta* is as follows.
 
 	`>contig-1.0`  
 	`GACACTTTTAGTGGGCGTAAACTTCATCTAGTGGATCT`  
 	`>contig-1.2`  
 	`CCATGTCAGAAGAAGTTGGTAATCGCCACATTAATTGTTTGTCGTTTGATCGA`  
 	`…`  
-- d2SBin_input_format2: fasta files only with contigs name from the same bins, such as the outputs from tool MetaCluster. Its outputs include bins-number of fasta files. Each fasta file only includes the contigs ID in the same bin, so the orginal fasta file including all the sequences of total contigs is also required. For example, the outputs from MetaCluster are *MetaCluster.out.001.fa … MetaCluster.out.00Y.fa*, where *Y* is the bins number by MetaCluster. The *MetaCluster.out.001.fa* is as follows  
+- Format2: fasta files only with contigs name from the same bins, such as the outputs from tool MetaCluster. Its outputs include bins-number of fasta files. Each fasta file only includes the contigs ID in the same bin, so the orginal fasta file including all the sequences of total contigs is also required. For example, the outputs from MetaCluster are *MetaCluster.out.001.fa … MetaCluster.out.00Y.fa*, where *Y* is the bins number by MetaCluster. The *MetaCluster.out.001.fa* is as follows  
 
 	`>contig-1.0`  
 	`>contig-1.1`  
@@ -68,7 +68,7 @@ The input of d2SBin is the output of existing contig-binning tools. The output o
 
 d2SBin is compatible to the two formats as the following commands:
 
-- **Format1 input**
+- **d2SBin_input_format1**
 
   In this case, d2SBin needs one list file as input.  
   
@@ -80,7 +80,7 @@ d2SBin is compatible to the two formats as the following commands:
   
 	 *`$ python d2SBin.py -s input_file_list_fomat1.txt -k 6 -r 0 -i 5 -o ../data/output/`*  
 	
-- **Format2 input**
+- **d2SBin_input_format2**
 
 	As for format2, d2SBin needs two input files: the original contig sequences file, e.g: *contigs.fasta*, and list file of other tools output.   
   
@@ -95,13 +95,13 @@ d2SBin is compatible to the two formats as the following commands:
 ### 3. Output  
 
 d2SBin also has two formats of output:  
-- Format 1: txt file with contigs ID and binning result label. eg. *d2SBin.out.k6.r0.txt*  
+- d2SBin_output_format1: txt file with contigs ID and binning result label. eg. *d2SBin.out.k6.r0.txt*  
 
 	`>contig-1.1, 0`  
 	`>contig-1.2, 3`  
 	`…`   	
 	
-- Format 2: fasta files with sequence from same bins. eg. *d2SBin.k6.r0.out0.fasta,...,d2SBin.k6.r0.out9.fasta*  
+- d2SBin_output_format2: fasta files with sequence from same bins. eg. *d2SBin.k6.r0.out0.fasta,...,d2SBin.k6.r0.out9.fasta*  
 
 	`>contig-1.0`  
 	`GACACTTTTAGTGGGCGTAAACTTCATCTAGTGGATCT`  
