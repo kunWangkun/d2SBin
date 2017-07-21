@@ -8,7 +8,7 @@ The d2SBin pipeline was developed with Python and run on the Unix and Linux plat
 ## Version Release Notes
 
 - Version 1.0  
-	1.This is the first version of d2SBin pipeline. [(Source code Download )](https://raw.githubusercontent.com/kunWangkun/d2SBin/master/d2SBin_SourceCode.tar)  
+	1.This is the first version of d2SBin pipeline. [(Source code Download )](https://raw.githubusercontent.com/kunWangkun/d2SBin/master/d2SBin_SourceCode.rar)  
 	2.An demo of d2SBin running is given [here](https://github.com/kunWangkun/d2SBin/blob/master/README.md#the-demo-of-d2sbin-on-testing-dataset).  
 ## Development Team
 The whole source code was developed by Ying Wang's group, Automation Department, Xiamen University, P.R.China. All the suggestions and questions are welcome to *wangying AT xmu.edu.cn*.
@@ -20,7 +20,7 @@ The whole source code was developed by Ying Wang's group, Automation Department,
 - Detailed steps  
         1.Download the source code to your directory, e.g: *’/home/user/d2SBin’*.  
  	2.Enter your specified directory: *$ cd /home/user/d2SBin*  
- 	3.Extract the tar file:  *$ tar -xvf d2SBin_SourceCode.tar*  
+ 	3.Extract the tar file:  *$ unrar -x d2SBin_SourceCode.tar*  
  	4.Enter the directory:  *$ cd /home/user/d2SBin/d2SBin_SourceCode*  
  	5.If your operating system has multiple Python version, please be sure your Python version at least 2.7 or above.  
 
