@@ -121,11 +121,11 @@ We provide a script *evaluation.py* for computing performance of binning with th
   	-e, --eva_output_dir: the path of evaluation file.    
 - Usage:
 
-	For the Format1 output(.txt file with contigs ID and binning result label), you can use the option *-c* to evaluate the result. e.g:	
+	For the Format1 output(*.txt* file with contigs ID and binning result label), you can use the option *-c* to evaluate the result. e.g:	
   
      *`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*      
 	
-	As for the Format2 (fasta files with sequence from same bins), you can create a list file and use the option *-l* . e.g:  
+	As for the Format2(*.fasta* files with sequence from same bins), you can create a list file and use the option *-l* . e.g:  
 	
 	*`$ ls /home/.../Binning.output*.fasta > output_file_list.txt`*    
 		
