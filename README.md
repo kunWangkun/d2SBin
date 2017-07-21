@@ -100,7 +100,7 @@ d2SBin also has two formats of output:
 	`>contig-1.2, 3`  
 	`…`   	
 	
-- Format 2: fasta files with sequence from same bins. eg. *d2SBin.k6.r0.out0.fasta*  
+- Format 2: fasta files with sequence from same bins. eg. *d2SBin.k6.r0.out0.fasta,...,d2SBin.k6.r0.out9.fasta*  
 
 	`>contig-1.0`  
 	`GACACTTTTAGTGGGCGTAAACTTCATCTAGTGGATCT`  
@@ -116,19 +116,16 @@ We provide a script *evaluation.py* for computing performance of binning with tw
  	-h, --help: show this help message and exit.   
   	-c, --binning_result: binning result file.    
 	-l, --list of binning result files.    
- 	-t, --ture_label: true label of contigs.   
+ 	-t, --true_label: true label of contigs.   
   	-e, --eva_output_dir: the path of evaluation file.    
 - Usage:
 
-   If the output of binning is one file with contigs ID and binning result labels, you can use the option *-c*. e.g:
-     
-     	*`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*  
+If the output of binning is one file with contigs ID and binning result labels, you can use the option *-c*. e.g:
+*`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*  
 	
-   If the output of binning are files with sequences from same bins, you can create a list file and use the option *-l* to evaluate the result. e.g:
-     
-     *`$ ls /home/.../Binning.output*.fasta > output_file_list.txt`* 
-     
-     *`$ python evaluation.py -l output_file_list.txt -t real_label.txt -e ./eva`* 
+If the output of binning are files with sequences from same bins, you can create a list file and use the option *-l* to evaluate the result. e.g:
+*`$ ls /home/.../Binning.output*.fasta > output_file_list.txt`*  
+*`$ python evaluation.py -l output_file_list.txt -t real_label.txt -e ./eva`* 
 
 
 ## The demo of d2SBin on testing dataset. 
