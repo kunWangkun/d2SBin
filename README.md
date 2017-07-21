@@ -129,7 +129,7 @@ We provide a script *evaluation.py* for computing performance of binning with th
 	
 	**(2)  Evaluate the original output of binning tools**  
 
-	For d2SBin_input_format1(.fasta files with contigs ID and sequences from same bins), you can create a list file and use the option *-l* to evaluate the result. e.g:  
+	For d2SBin_input_format1(.fasta files with contigs ID and sequences from same bins), you can create a list file and use the option *-l*. e.g:  
 	
 	*`$ ls /home/.../Binning.output*.fasta > output_fasta_file_list.txt`*    
 		
