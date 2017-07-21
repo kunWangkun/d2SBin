@@ -143,9 +143,9 @@ We provide a script *evaluation.py* for computing performance of binning with th
 		
 	*`$ python evaluation.py -l output_fa_file_list.txt -t real_label.txt -e ./eva`*   
 	
-- **Format of true lable file**
+- **Format of true label file**
 
-	The format of true lable file is not fixed. It can works as long as each line of the true label file has the contig ID on the first column and the genome information(such as genome name, Gene ID) on the second field. e.g:   
+	The format of true label file is not fixed. It can works as long as each line of the true label file has the contig ID on the first column and the genome information(such as genome name, Gene ID) on the second field. e.g:   
    
   	`NODE_1_length_83949_cov_75.226173       256653503       Acetobacter pasteurianus`  
 	`NODE_2_length_45147_cov_75.717964       256653503       Acetobacter pasteurianus`
