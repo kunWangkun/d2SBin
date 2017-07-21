@@ -110,7 +110,7 @@ d2SBin also has two formats of output:
 	`…`   
 
 ### 4. Evaluate output   
-We provide a script *evaluation.py* for computing performance of binning with two different types of output. The usage can be viewed by typing *python evaluation.py -h* on the command line:  
+We provide a script *evaluation.py* for computing performance of binning with the two formats of output mentioned above. The usage can be viewed by typing *python evaluation.py -h* on the command line:  
 
 - Options:  
 
@@ -121,11 +121,11 @@ We provide a script *evaluation.py* for computing performance of binning with tw
   	-e, --eva_output_dir: the path of evaluation file.    
 - Usage:
 
-	If the output of binning is one file with contigs ID and binning result labels, you can use the option *-c*. e.g:	
+	For the Format1 output(.txt file with contigs ID and binning result label), you can use the option *-c* to evaluate the result. e.g:	
   
      *`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*      
 	
-	If the output of binning are files with sequences from same bins, you can create a list file and use the option *-l* to evaluate the result. e.g:  
+	As for the Format2 (fasta files with sequence from same bins), you can create a list file and use the option *-l* . e.g:  
 	
 	*`$ ls /home/.../Binning.output*.fasta > output_file_list.txt`*    
 		
