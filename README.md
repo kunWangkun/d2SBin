@@ -121,13 +121,13 @@ We provide a script *evaluation.py* for computing performance of binning with th
   	-e, --eva_output_dir: the path of evaluation file.    
 - **Usage:**  
 
-	(1)  Evaluate the output of d2SBin  	
+	**(1)  Evaluate the output of d2SBin**   	
 
 	For the .txt output file of d2SBin, you can use the option *-c* to evaluate the result. e.g:
  
-     *`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*      
+     *`$ python evaluation.py -c d2SBin.k6.r0.txt -t real_label.txt -e ./eva`*       
 	
-	(2)  Evaluate the original output of binning tools  
+	**(2)  Evaluate the original output of binning tools**  
 
 	For d2SBin_input_format1(.fasta files with contigs ID and sequences from same bins), you can create a list file and use the option *-l* to evaluate the result. e.g:  
 	
