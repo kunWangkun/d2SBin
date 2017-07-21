@@ -145,10 +145,10 @@ We provide a script *evaluation.py* for computing performance of binning with th
 	
 - **Format of true label file**
 
-	The format of true label file is not fixed. It can works as long as each line of the true label file has the contig ID on the first column and the genome information(such as genome name, Gene ID) on the second column. e.g:   
+	The format of true label file is not fixed. It can works as long as each line of the true label file has the contig ID on the first column and the genome information(such as genome name, Genome ID) on the second column. e.g:   
    
-  	`NODE_1_length_83949_cov_75.226173       256653503       Acetobacter pasteurianus`  
-	`NODE_2_length_45147_cov_75.717964       256653503       Acetobacter pasteurianus`
+			`NODE_1_length_83949_cov_75.226173	256653503	Acetobacter pasteurianus`  
+	`NODE_2_length_45147_cov_75.717964	256653503       Acetobacter pasteurianus`  
 	`...`
 	
 
