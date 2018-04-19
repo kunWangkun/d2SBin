@@ -74,13 +74,13 @@ d2SBin is compatible to the two formats as the following commands:
   
   First, get list file:   
   
-	 *`$ ls /home/.../MaxBin.out*.fasta > input_file_list_fomat1.txt`*   
+	 *`$ ls /home/.../MaxBin.out*.fasta > input_file_list_format1.txt`*   
 	
   where */home/.../* means the absolute path of your fasta files.
 	
   Next, run d2SBin.py:   
   
-	 *`$ python d2SBin.py -s input_file_list_fomat1.txt -k 6 -r 0 -i 5 -o ../data/output/`*  
+	 *`$ python d2SBin.py -s input_file_list_format1.txt -k 6 -r 0 -i 5 -o ../data/output/`*  
 	
 - **d2SBin_input_format2**
 
@@ -88,7 +88,7 @@ d2SBin is compatible to the two formats as the following commands:
   
 	First, get the list file:  	
   
-	 *`$ ls /home/.../MetaCluster.out*.fa > input_file_list_fomat2.txt`*     
+	 *`$ ls /home/.../MetaCluster.out*.fa > input_file_list_format2.txt`*     
 	
  	Next, run d2SBin.py:  
   
